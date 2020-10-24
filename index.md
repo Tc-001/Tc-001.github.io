@@ -7,7 +7,7 @@ I am making this mostly to test out what it can do, as this sounds like a fun th
 I will probably use this for projects that I want to share, but don't want to spin up a linode for.
 
 
-# Stuff
+# Stuffs
 * [Hallway css test](demos/hallway/index.html)
     * Me trying out different stuffs with css
 More stuff to come... I think.
