@@ -1,18 +1,18 @@
 body {
-    height: 100%;
-    background-color: #C5D5E4;
+  height: 100%;
+  background-color: #c5d5e4;
 }
 
 #frame {
-    background-color: #8896AB;
-    max-width: 50vw;
-    min-width: 20em;
-    word-wrap: normal;
-    border: 5px solid transparent;
-    border-radius: 1em;
-    margin-top: 40vh;
+  background-color: #8896ab;
+  max-width: 50vw;
+  min-width: 20em;
+  word-wrap: normal;
+  border: 5px solid transparent;
+  border-radius: 1em;
+  margin-top: 40vh;
 }
 
 #display {
-    font-size: xx-large;
+  font-size: xx-large;
 }
