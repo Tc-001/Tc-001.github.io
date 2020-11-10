@@ -8,6 +8,7 @@ I will probably use this for projects that I want to share, but don't want to sp
 
 
 # Stuffs
-* [Hallway css test](projects/hallway/index.html)
+* [Timezone guesser](projects/blarg_tz)
+* [Hallway css test](projects/hallway)
     * Me trying out different stuffs with css
 * More stuff to come... I think.

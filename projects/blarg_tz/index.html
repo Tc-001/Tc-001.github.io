@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>b!timezone</title>
+  </head>
+
+  <body>
+    <center>
+      <div id="frame">
+        <p id="display">Loading...</p>
+      </div>
+      <p onclick="copy()" id="copyprompt">Copy to clipboard</p>
+      <br />
+      <br />
+      <p style="color: rgb(79, 99, 109)">
+        Don't you hate that you have to scroll through a table of times to fing
+        your timezone? Well I sure did. <br />
+        Now it is as easy as a click and a paste. <br />
+        This will not work in internet explorer or your old nintendo DS. May
+        I recommend
+        <a href="https://www.mozilla.org/en-US/firefox/new/">firefox</a
+        >?<br /><br />
+        (Everything is done in your browser, nothing is sent to anywhere. If any
+        questions arise feel free to contact me)
+      </p>
+    </center>
+    <script defer>
+      document.getElementById("display").innerHTML =
+        "b!timezone " + Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+      function copy() {
+        var el = document.createElement("textarea");
+        el.value = document.getElementById("display").textContent;
+        document.body.appendChild(el);
+        el.select();
+        el.setSelectionRange(0, 99999); /*For mobile devices*/
+        document.execCommand("copy");
+        document.getElementById("copyprompt").innerHTML = "Copied!";
+        setTimeout(() => {
+          document.getElementById("copyprompt").innerHTML = "Copy to clipboard";
+        }, 2000);
+        console.log("Copied " + el.value);
+        document.body.removeChild(el);
+      }
+    </script>
+  </body>
+</html>
