@@ -1,11 +1,13 @@
 * {
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 .container {
   display: flex;
-  --zoom:0vw
+  --zooml:0vw;
+  --zoomr:0vw
 }
 
 body {
@@ -13,10 +15,12 @@ body {
 }
 
 .container:hover {
-    --zoom: 5vw
+  --zooml: -5vw;
+  --zoomr: 5vw
 }
 
 .wallL {
+  transition: translateX, 3s;
     z-index: 1;
   width: 45vw;
   height: 100vh;
@@ -28,10 +32,11 @@ body {
     rgba(2, 175, 230, 1) 90%,
     rgb(0, 0, 0) 100%
   );
-  transform: translateX(0);
+  transform: translateX(var(--zooml));
 }
 
 .wallR {
+  transition: translateX, 3s;
     z-index: 1;
   width: 45vw;
   height: 100vh;
@@ -43,7 +48,7 @@ body {
     rgba(2, 175, 230, 1) 90%,
     rgb(0, 0, 0) 100%
   );
-  transform: translate(0,0);
+  transform: translateX(var(--zoomr));
 }
 
 .end {
