@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>REDIRECT</title>
+		<script>
+			function getParameterByName(name, url = window.location.href) {
+				name = name.replace(/[\[\]]/g, "\\$&");
+				var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+					results = regex.exec(url);
+				if (!results) return null;
+				if (!results[2]) return "";
+				return decodeURIComponent(results[2].replace(/\+/g, " "));
+			}
+			var url = getParameterByName("url")
+			if (url) {
+				window.location.href = url
+			} else {
+				window.location.href = "about:blank"
+			}
+		</script>
+	</head>
+	<body></body>
+</html>
